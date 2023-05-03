@@ -1,0 +1,152 @@
+{
+    "1": {
+        "sunrise": "6:21 am",
+        "sunset": "7:12 pm",
+        "length": "12:50:55"
+    },
+    "2": {
+        "sunrise": "6:22 am",
+        "sunset": "7:10 pm",
+        "length": "12:48:55"
+    },
+    "3": {
+        "sunrise": "6:22 am",
+        "sunset": "7:09 pm",
+        "length": "12:46:56"
+    },
+    "4": {
+        "sunrise": "6:23 am",
+        "sunset": "7:08 pm",
+        "length": "12:44:55"
+    },
+    "5": {
+        "sunrise": "6:24 am",
+        "sunset": "7:06 pm",
+        "length": "12:42:55"
+    },
+    "6": {
+        "sunrise": "6:24 am",
+        "sunset": "7:05 pm",
+        "length": "12:40:54"
+    },
+    "7": {
+        "sunrise": "6:25 am",
+        "sunset": "7:04 pm",
+        "length": "12:38:52"
+    },
+    "8": {
+        "sunrise": "6:26 am",
+        "sunset": "7:02 pm",
+        "length": "12:36:51"
+    },
+    "9": {
+        "sunrise": "6:26 am",
+        "sunset": "7:01 pm",
+        "length": "12:34:49"
+    },
+    "10": {
+        "sunrise": "6:27 am",
+        "sunset": "7:00 pm",
+        "length": "12:32:47"
+    },
+    "11": {
+        "sunrise": "6:28 am",
+        "sunset": "6:58 pm",
+        "length": "12:30:45"
+    },
+    "12": {
+        "sunrise": "6:28 am",
+        "sunset": "6:57 pm",
+        "length": "12:28:42"
+    },
+    "13": {
+        "sunrise": "6:29 am",
+        "sunset": "6:56 pm",
+        "length": "12:26:40"
+    },
+    "14": {
+        "sunrise": "6:30 am",
+        "sunset": "6:54 pm",
+        "length": "12:24:37"
+    },
+    "15": {
+        "sunrise": "6:30 am",
+        "sunset": "6:53 pm",
+        "length": "12:22:34"
+    },
+    "16": {
+        "sunrise": "6:31 am",
+        "sunset": "6:51 pm",
+        "length": "12:20:31"
+    },
+    "17": {
+        "sunrise": "6:32 am",
+        "sunset": "6:50 pm",
+        "length": "12:18:28"
+    },
+    "18": {
+        "sunrise": "6:32 am",
+        "sunset": "6:49 pm",
+        "length": "12:16:25"
+    },
+    "19": {
+        "sunrise": "6:33 am",
+        "sunset": "6:47 pm",
+        "length": "12:14:21"
+    },
+    "20": {
+        "sunrise": "6:34 am",
+        "sunset": "6:46 pm",
+        "length": "12:12:18"
+    },
+    "21": {
+        "sunrise": "6:34 am",
+        "sunset": "6:45 pm",
+        "length": "12:10:14"
+    },
+    "22": {
+        "sunrise": "6:35 am",
+        "sunset": "6:43 pm",
+        "length": "12:08:11"
+    },
+    "23": {
+        "sunrise": "6:36 am",
+        "sunset": "6:42 pm",
+        "length": "12:06:07"
+    },
+    "24": {
+        "sunrise": "6:36 am",
+        "sunset": "6:40 pm",
+        "length": "12:04:04"
+    },
+    "25": {
+        "sunrise": "6:37 am",
+        "sunset": "6:39 pm",
+        "length": "12:02:00"
+    },
+    "26": {
+        "sunrise": "6:38 am",
+        "sunset": "6:38 pm",
+        "length": "11:59:56"
+    },
+    "27": {
+        "sunrise": "6:38 am",
+        "sunset": "6:36 pm",
+        "length": "11:57:53"
+    },
+    "28": {
+        "sunrise": "6:39 am",
+        "sunset": "6:35 pm",
+        "length": "11:55:49"
+    },
+    "29": {
+        "sunrise": "6:40 am",
+        "sunset": "6:34 pm",
+        "length": "11:53:45"
+    },
+    "30": {
+        "sunrise": "6:40 am",
+        "sunset": "6:32 pm",
+        "length": "11:51:42"
+    }
+}
