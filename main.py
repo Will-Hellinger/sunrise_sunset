@@ -140,6 +140,7 @@ def get_lowest_value(list: list):
 			output = item
 	return output
 
+
 def display(surface, screen_resolution, year: int, city: str, sunrise_color: str, sunset_color: str, date: int):
 	sunsets = []
 	sunrises = []
@@ -179,19 +180,18 @@ def display(surface, screen_resolution, year: int, city: str, sunrise_color: str
 			previous_feedback = False
 			continue
 		#delays by a day for leaving daylights savings, idk man, weather moment
+		#breaks past day 20, need to investigate
 
 		previous_feedback = (check_daylight_savings(sunsets, sunset, date, previous_feedback))
 		daylights.append(previous_feedback)
-	print(sunsets)
-	print(daylights)
 
 	for sunset in range(0, len(sunsets)):
 		if sunsets[sunset] is None:
 			continue
 
 		sunsets[sunset] += 660
-		if daylights[sunset] == False:
-			sunsets[sunset] += 60
+		if daylights[sunset] == True:
+			sunsets[sunset] -= 60
 		
 		pygame.draw.circle(surface, sunset_color, (((((screen_resolution[1] - spacer) - spacer)/int(len(months)))*(sunset+1))+spacer, (screen_resolution[0]-spacer)-((((screen_resolution[0]-spacer)-spacer)/24)*((sunsets[sunset])/60))), 3)
 
@@ -199,11 +199,11 @@ def display(surface, screen_resolution, year: int, city: str, sunrise_color: str
 		if sunrises[sunrise] is None:
 			continue
 
-		if daylights[sunrise] == False:
-			sunrises[sunrise] += 60
+		if daylights[sunrise] == True:
+			sunrises[sunrise] -= 60
 		
 		pygame.draw.circle(surface, sunrise_color, (((((screen_resolution[1]-spacer)-spacer)/int(len(months)))*(sunrise+1))+spacer, (screen_resolution[0]-spacer)-((((screen_resolution[0]-spacer)-spacer)/24)*((sunrises[sunrise])/60))), 3)
-	print(sunsets)
+
 	pygame.display.flip()
 
 	sunset_sin_equation = f'y={round((get_highest_value(sunsets)-get_lowest_value(sunsets))/2)}sin({round(360/12)}(x+{((sunsets.index(find_nearest(sunsets, ((get_highest_value(sunsets)+get_lowest_value(sunsets))/2))))+1)*-1}))+{round((get_highest_value(sunsets)+get_lowest_value(sunsets))/2)}'
@@ -216,7 +216,7 @@ def display(surface, screen_resolution, year: int, city: str, sunrise_color: str
 	print(f'{year} Sunset Eqautions: {sunset_sin_equation} | {sunset_cos_equation}')
 
 
-window = sg.Window('debugger', load_layout(), resizable=True)
+window = sg.Window('controller', load_layout(), resizable=True)
 
 while True:
 	for event in pygame.event.get():
@@ -230,11 +230,14 @@ while True:
 			for year in years:
 				if values[f'_{year}_HIDE_'] == True:
 					continue
-					
-				if values['_DATE_INPUT_'] >= 29:
+
+				if int(values['_DATE_INPUT_']) >= 32 or int(values['_DATE_INPUT_']) <= 0:
+					continue
+
+				if int(values['_DATE_INPUT_']) >= 29:
 					print('WARNING: data becomes EXTREMELY unreliable at this date, some months do not contain this date and thus will break')
 				
-				display(surface, screen_resolution, year, values['_LOCATION_'], values[f'_{year}_SUNRISE_COLOR_'], values[f'_{year}_SUNSET_COLOR_'], values['_DATE_INPUT_'])
+				display(surface, screen_resolution, year, values['_LOCATION_'], values[f'_{year}_SUNSET_COLOR_'], values[f'_{year}_SUNRISE_COLOR_'], values['_DATE_INPUT_'])
 		case 'SCRAPE':
 			try:
 				scrape_data(years=[values['_YEAR_INPUT_']], city=values['_CITY_INPUT_'], location=values['_LOCATION_INPUT_'])
